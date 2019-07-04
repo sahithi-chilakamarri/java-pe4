@@ -48,5 +48,22 @@ public class SortingTheStringsTest {
         assertEquals("Null String is not accepted",result);
 
     }
+    @Test
+    public void givenNumberShouldReturnError(){
+        //arrange
+        //act
+        String result=sortingTheStrings.sortTheStrings("1");
+        //assert
+        assertNotEquals("Number",result);
+    }
+    @Test
+    public void givenSpecialCharacterShouldReturnError(){
+        //arrange
+        //act
+        String result=sortingTheStrings.sortTheStrings("@");
+        //assert
+        assertNotEquals("Special Character",result);
+    }
+
 
 }

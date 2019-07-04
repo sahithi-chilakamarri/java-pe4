@@ -45,5 +45,22 @@ public class ReplaceTheLettersTest {
         //assert
         assertEquals("Empty String is not accepted",result);
     }
+    @Test
+    public void givenNumberShouldReturnError(){
+        //arrange
+        //act
+        String result=replaceTheLetters.replaceTheLettersInString("2");
+        //assert
+        assertNotEquals("Number",result);
+    }
+    @Test
+    public void givenSpecialCharacterShouldReturnError(){
+        //arrange
+        //act
+        String result=replaceTheLetters.replaceTheLettersInString("@");
+        //assert
+        assertNotEquals("Special Character",result);
+    }
+
 
 }

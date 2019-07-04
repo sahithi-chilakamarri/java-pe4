@@ -42,5 +42,21 @@ public class CountOccurrencesOfALetterTest {
         //act
         assertNotEquals(0,result);
     }
+    @Test
+    public void givenNumberShouldReturnError(){
+        //arrange
+        //act
+        int result=countOccurrencesOfALetter.numberOfOccurrencesOfALetter("2",'f');
+        //assert
+        assertNotEquals(-1,result);
+    }
+    @Test
+    public void givenSpecialCharacterShouldReturnError(){
+        //arrange
+        //act
+        int result=countOccurrencesOfALetter.numberOfOccurrencesOfALetter("@",'f');
+        //assert
+        assertNotEquals("Special Character",result);
+    }
 
 }

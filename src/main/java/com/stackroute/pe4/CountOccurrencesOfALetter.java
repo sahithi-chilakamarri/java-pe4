@@ -5,6 +5,10 @@ public class CountOccurrencesOfALetter
     public int numberOfOccurrencesOfALetter(String inputString,char letter)
     {
         int count=0;
+        if(inputString.contains("0 1 2 3 4 5 6 7 8 9"))
+        {
+            count=-1;
+        }
         //If the input is null or emptystring error message is displayed
         if(inputString==null || inputString==" ")
         {

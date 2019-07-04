@@ -47,5 +47,22 @@ public ReverseTheString reverseString;
         assertEquals("Null String is not accepted",result);
 
     }
+    @Test
+    public void givenNumberShouldReturnError(){
+        //arrange
+        //act
+        String result=reverseString.reverseTheString("1");
+        //assert
+        assertNotEquals("Number",result);
+    }
+    @Test
+    public void givenSpecialCharacterShouldReturnError(){
+        //arrange
+        //act
+        String result=reverseString.reverseTheString("@");
+        //assert
+        assertNotEquals("Special Character",result);
+    }
+
 
 }

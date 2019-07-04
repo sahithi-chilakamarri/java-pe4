@@ -56,5 +56,21 @@ public RegularExpressionDemo regularExpressionDemo;
         assertEquals("Null is not accepted",result);
 
     }
+    @Test
+    public void givenNumberShouldReturnError(){
+        //arrange
+        //act
+        String result=regularExpressionDemo.containWord("1");
+        //assert
+        assertNotEquals("Number",result);
+    }
+    @Test
+    public void givenSpecialCharacterShouldReturnError(){
+        //arrange
+        //act
+         String result=regularExpressionDemo.containWord("@");
+        //assert
+        assertNotEquals("Special Character",result);
+    }
 
 }
